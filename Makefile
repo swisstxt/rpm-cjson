@@ -1,5 +1,5 @@
 HOME=$(shell pwd)
-VERSION=2.1
+VERSION=2.1.0
 RELEASE=1
 
 all: build
@@ -9,10 +9,10 @@ clean:
 	mkdir -p ./rpmbuild/SPECS/ ./rpmbuild/SOURCES/
 
 download-upstream:
-	./download lua-cjson-${VERSION}devel.tar.gz https://github.com/mpx/lua-cjson/archive/${VERSION}.0.tar.gz
+	./download lua-cjson-${VERSION}.tar.gz http://www.kyne.com.au/~mark/software/download/lua-cjson-${VERSION}.tar.gz
 
 build: clean download-upstream
 	mkdir -p ./SPECS/ ./SOURCES/
 	cp -r ./SPECS/* ./rpmbuild/SPECS/ || true
 	cp -r ./SOURCES/* ./rpmbuild/SOURCES/ || true
-	rpmbuild -tb "./rpmbuild/SOURCES/lua-cjson-${VERSION}devel.tar.gz" \
+	rpmbuild -tb "./rpmbuild/SOURCES/lua-cjson-${VERSION}.tar.gz" \
