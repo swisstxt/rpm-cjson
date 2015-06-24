@@ -1,6 +1,6 @@
 HOME=$(shell pwd)
 VERSION=2.1
-RELEASE=0
+RELEASE=1
 
 all: build
 
