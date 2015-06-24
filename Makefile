@@ -9,7 +9,7 @@ clean:
 	mkdir -p ./rpmbuild/SPECS/ ./rpmbuild/SOURCES/
 
 download-upstream:
-	./download lua-cjson-${VERSION}devel.tar.gz https://github.com/mpx/lua-cjson/archive/${VERSION}.tar.gz
+	./download lua-cjson-${VERSION}devel.tar.gz https://github.com/mpx/lua-cjson/archive/${VERSION}.0.tar.gz
 
 build: clean download-upstream
 	mkdir -p ./SPECS/ ./SOURCES/
